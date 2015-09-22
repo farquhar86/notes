@@ -1,0 +1,15 @@
+
+	<div id="creatures" class="transitions-enabled">
+		<% @creatures.each do |creature| %>
+            <div class="box panel panel-default">
+            	<img src="http://i.imgur.com/sDLIAZD.png" alt="">
+            	<div class="panel-body">
+			        <h3><%= creature.name %> </h3>
+			        <p><%=  creature.description %></p>
+			        <p><%= link_to  "View Details", creature, method: :get %> <%= button_to "Delete", creature, method: :delete %></p>
+			      </div>
+			</div>     
+    	<% end %>
+	</div>
+
+
